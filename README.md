@@ -19,6 +19,8 @@ To debug in VSCode, run `firebase emulators:start --inspect-functions` in the te
 
 ## Contributing
 
+Many thanks to [Kyle](https://github.com/kQuintal), [Filip](https://github.com/IMFIL) and [Anthony](https://github.com/anthonyanader) for their past contributions!
+
 This repo can definitely use an update so **PRs are more than welcome**! ❤️❤️❤️
 
 Currently, the only supported city is the city of Ottawa, but of course, if someone is interested in adding their city, feel free to reach out to us at hello@neappoli.com or creating PRs :)

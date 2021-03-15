@@ -11,12 +11,9 @@ exports.TIME_FORMAT = "YYYY-MM-DDTHH:mm:ssZ";
 
 const neappoliApiConfig = functions.config().neappoli_api;
 
-exports.CLOSE_SR_SECRET =
-  neappoliApiConfig === undefined ? "" : neappoliApiConfig.close_sr_secret;
-exports.DELETE_SR_SECRET =
-  neappoliApiConfig === undefined ? "" : neappoliApiConfig.delete_sr_secret;
-exports.GET_SR_BY_ID_SECRET =
-  neappoliApiConfig === undefined ? "" : neappoliApiConfig.get_sr_by_id_secret;
+exports.NEAPPOLI_API_KEY = process.env.NEAPPOLI_API_KEY
+  ? process.env.NEAPPOLI_API_KEY
+  : neappoliApiConfig.neappoli_api_key;
 
 const mailjetConfig = functions.config().mailjet;
 
@@ -28,9 +25,7 @@ exports.MAILJET_PRIVATE_KEY =
 // Environment variables contain:
 // {
 // 	neappoli_api: {
-// 		close_sr_secret: AAA,
-// 		delete_sr_secret: BBB,
-// 		get_sr_by_id_secret: CCC
+// 		neappoli_api_key: AAA,
 // 	},
 // 	mailjet: {
 // 		public_key: XXX,
@@ -39,11 +34,11 @@ exports.MAILJET_PRIVATE_KEY =
 // }
 
 // To set an environment variable, run this in the console:
-// firebase functions:config:set neappoli_api.close_sr_secret="XXX" neappoli_api.delete_sr_secret="YYY" [etc]
+// firebase functions:config:set neappoli_api.neappoli_api_key="XXX" [etc]
 
 // To fetch an env variable, just do:
 // const functions = require('firebase-functions');
-// functions.config().neappoli_api.close_sr_secret
+// functions.config().neappoli_api.neappoli_api_key
 
 // More info on that at https://firebase.google.com/docs/functions/config-env
 
