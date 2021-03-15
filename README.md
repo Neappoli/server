@@ -7,6 +7,7 @@ The API documentation is found on this repository's wiki.
 
 ## Getting started
 
+0. Create a `.env` file under `functions/` with the contents of `.env.template`, and populate all fields (PROD variables optional).
 1. You need to add the development environment to the project, as mentioned above. To do so, create a new firebase project, then go to projects settings > service accounts > tick Node.js and click the **Generate new private key** button. Rename the file `firebase-service-account-DEV.json` and save it under `functions/`.
 2. Install packages with `yarn` inside `functions/`
 3. Using the Firebase CLI, run `firebase use <project-id>` where `<project-id>` is the ID of the Firebase project you created in step 1.
