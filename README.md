@@ -3,7 +3,7 @@ Back-end service for the Neappoli app to handle requests submissions and user no
 
 To make it work, you need to download the service private keys for the Production and Development respectively. Name them `firebase-service-account-DEV.json` and `firebase-service-account-PROD.json` and put them under `functions/`.
 
-The API documentation is found on this repository's wiki.
+The API documentation is found on [this repository's wiki](https://github.com/Neappoli/server/wiki).
 
 ## Getting started
 
